@@ -1,8 +1,10 @@
 import useFakeData from '../../hooks/useFakeData';
 import Banner from '../Banner/Banner';
+import DentalShop from '../DentalShop/DentalShop';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import HomeService from '../HomeService/HomeService'
-import React from 'react';
+import HomeService from '../HomeService/HomeService';
+
 
 const Home = () => {
     const {services} = useFakeData();
@@ -24,6 +26,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <DentalShop></DentalShop>
+            <Footer></Footer>
         </div>
     );
 };
