@@ -8,7 +8,7 @@ import './Banner.css';
 const Banner = () => {
   return (
     <>
-      <Carousel className='bg-secondary' controls={false}>
+      <Carousel className='bg-primary' controls={false}>
         <Carousel.Item interval={1000}>
           <div className="row p-3">
             <div className="col">
@@ -26,7 +26,7 @@ const Banner = () => {
                   <div className='text-start text-white border border-3 border-white p-5 rounded'>
                     <h1 className='fs-1 text-justify'>Best Dental clinic in Dhaka city with high professional doctors</h1>
                     <p className='text-justify'>General dentistry is important to maintaining the health of your smile as well as your overall health. Unaddressed tooth decay or gum disease can lead to infections and other conditions that can put your entire body at risk for health issues.</p>
-                    <button className='btn btn-primary border border-2 border-white'>Book Appointment Here <FiArrowRightCircle/> </button>
+                    <button className='btn btn-secondary border border-2 border-white'>Book Appointment Here <FiArrowRightCircle/> </button>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const Banner = () => {
                   <div className='text-start text-white border border-3 border-white p-5 rounded'>
                     <h1 className='fs-1 text-justify'>High quality of medical services with advanced medical technologies</h1>
                     <p className='text-justify'>all specialists have extensive practical experience and regularly training courses in educational centers of the world.</p>
-                    <button className='btn btn-primary border border-2 border-white'>Book Appointment Now with 10% cashback <FiArrowRightCircle/> </button>
+                    <button className='btn btn-secondary border border-2 border-white'>Book Appointment Now with 10% cashback <FiArrowRightCircle/> </button>
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -62,12 +62,12 @@ const Banner = () => {
       <div className='bg-primary p-5'>
         <div className="row">
           <div className="col">
-            <div className="row d-flex justify-content-around align-items-center">
-              <div className="col-lg-6 text-start text-white">
-                 <p className='fs-4'> <span className='fs-1'><GrUserExpert/></span> All specialists have extensive practical experience and regularly training courses in educational centers of the world.</p>
+            <div className="row d-flex justify-content-between align-items-center">
+              <div className="col-lg-6  text-start fs-4 fw-bold text-white">
+                 <p> <span className='fs-1'><GrUserExpert/></span> All specialists have extensive practical experience and regularly training courses in educational centers of the world.</p>
               </div>
-              <div className="col-lg-6">
-                <h1 className='text-white'> <FiPhoneForwarded/> +8801715009002</h1>
+              <div className="col-lg-6  text-end">
+                <h1 className='text-white'> <FiPhoneForwarded/> +88017150009002</h1>
                 <NavLink to='*'>
                 <button className='btn btn-secondary border border-2 border-white'>Booking Appointment and get 10% cashback <FiArrowRightCircle/> </button>
                 </NavLink>
