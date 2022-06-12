@@ -16,7 +16,7 @@ const DentalShop = () => {
             <div className="row">
                 <div className="col">
                     <div className="row g-5 d-flex justify-content-between align-items-center">
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="card shop-card" >
                                 <img src={productImg.one} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">
@@ -26,7 +26,7 @@ const DentalShop = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="card shop-card" >
                                 <img src={productImg.two} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">
@@ -36,7 +36,7 @@ const DentalShop = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="card shop-card" >
                                 <img src={productImg.three} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">
@@ -46,7 +46,7 @@ const DentalShop = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="card shop-card" >
                                 <img src={productImg.four} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">

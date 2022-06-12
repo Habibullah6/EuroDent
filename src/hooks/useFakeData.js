@@ -10,7 +10,7 @@ useEffect(()=>{
     .then(data => setServices(data))
 }, [])
 
-return {services};
+return [services];
 
 }
 

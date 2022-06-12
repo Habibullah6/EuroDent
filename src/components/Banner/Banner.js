@@ -2,13 +2,13 @@ import Carousel from 'react-bootstrap/Carousel';
 import { FiArrowRightCircle, FiPhoneForwarded } from "react-icons/fi";
 import { GrUserExpert } from "react-icons/gr";
 import { NavLink } from 'react-router-dom';
-import bannerOne from '../../images/banner1.png';
-import bannerTwo from '../../images/banner2.png';
+import bannerTwo from '../../images/dental-equipment.png';
+import bannerOne from '../../images/doc_team.jpg';
 import './Banner.css';
 const Banner = () => {
   return (
-    <>
-      <Carousel className='bg-primary' controls={false}>
+    <div>
+      <Carousel controls={false} className='bg-secondary'>
         <Carousel.Item interval={1000}>
           <div className="row p-3">
             <div className="col">
@@ -26,7 +26,7 @@ const Banner = () => {
                   <div className='text-start text-white border border-3 border-white p-5 rounded'>
                     <h1 className='fs-1 text-justify'>Best Dental clinic in Dhaka city with high professional doctors</h1>
                     <p className='text-justify'>General dentistry is important to maintaining the health of your smile as well as your overall health. Unaddressed tooth decay or gum disease can lead to infections and other conditions that can put your entire body at risk for health issues.</p>
-                    <button className='btn btn-secondary border border-2 border-white'>Book Appointment Here <FiArrowRightCircle/> </button>
+                   <NavLink to='*'> <button className='btn btn-secondary border border-2 border-white'>Book Appointment Here <FiArrowRightCircle/> </button></NavLink>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,9 @@ const Banner = () => {
                   <div className='text-start text-white border border-3 border-white p-5 rounded'>
                     <h1 className='fs-1 text-justify'>High quality of medical services with advanced medical technologies</h1>
                     <p className='text-justify'>all specialists have extensive practical experience and regularly training courses in educational centers of the world.</p>
+                    <NavLink to='*'>
                     <button className='btn btn-secondary border border-2 border-white'>Book Appointment Now with 10% cashback <FiArrowRightCircle/> </button>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -59,11 +61,11 @@ const Banner = () => {
         </Carousel.Item>
       </Carousel>
 
-      <div className='bg-primary p-5'>
+      <div className=' p-5 bg-primary'>
         <div className="row">
           <div className="col">
             <div className="row d-flex justify-content-between align-items-center">
-              <div className="col-lg-6  text-start fs-4 fw-bold text-white">
+              <div className="col-lg-6  fs-4 fw-bold text-white text-start">
                  <p> <span className='fs-1'><GrUserExpert/></span> All specialists have extensive practical experience and regularly training courses in educational centers of the world.</p>
               </div>
               <div className="col-lg-6  text-end">
@@ -76,7 +78,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
 
 
   );

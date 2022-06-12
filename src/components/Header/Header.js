@@ -1,25 +1,26 @@
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
     return (
         
-            <Navbar collapseOnSelect expand="lg" bg="primary">
-                <Container>
-                    <Navbar.Brand as={NavLink} to="/" className='fw-bold text-white fs-2'>EuroDent</Navbar.Brand>
-                    <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end">
-                      <div className='navigation-bar'>
-                        <NavLink to="/home">Home</NavLink>
-                        <NavLink to="/">About us</NavLink>
-                        <NavLink to="/">Services</NavLink>
-                        <NavLink to="/">Doctors</NavLink>
-                        <NavLink to="/">Contact us</NavLink>
-                      </div>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
+        <Navbar.Brand className='fs-2 fw-bold text-primary' as={NavLink} to='/' >EuroDent</Navbar.Brand>
+        </Nav>
+        <Nav className='nav-container'>
+        <NavLink to='/home'>Home</NavLink>
+        <NavLink to='/about'>About</NavLink>
+        <NavLink to='/services'>Services</NavLink>
+        <NavLink to='/login'>Login/Register</NavLink>
+        </Nav>
+      </Navbar.Collapse>
+      </Container>
+    </Navbar>
         
     );
 };
