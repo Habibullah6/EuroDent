@@ -5,19 +5,16 @@ initializeAuthentication()
 
 const useFirebase = () => {
 const [user, setUser] = useState({})
+
 const auth = getAuth();
+const googleProvider = new GoogleAuthProvider();
 const handleGoogleSignIn = () => {
-    const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider)
-    .then(result => {
-       const user = result.user;
-       setUser(user);
-       console.log(user);
-    })
-    .catch(error =>{
-      alert(error.message)
-    })
+ 
+   return signInWithPopup(auth, googleProvider)
+ 
 }
+
+
 
 useEffect(()=>{
   onAuthStateChanged(auth, (user)=>{

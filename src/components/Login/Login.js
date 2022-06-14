@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsGoogle } from "react-icons/bs";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../context/useAuth";
 import loginBanner from '../../images/bg3.jpg';
 import './Login.css';
@@ -9,6 +9,8 @@ const Login = () => {
     const {handleGoogleSignIn, handleEmailPasswordLogin, setUser} = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+
     const handleEmail = (e) => {
        setEmail(e.target.value)
     }
@@ -30,7 +32,23 @@ const Login = () => {
             alert(errorMessage)
           });
     }
-
+    
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirectUri = location.state?.from || '/home';
+    const handleGoogleLogIn = () => {
+        
+        handleGoogleSignIn()
+        .then(result => {
+            const user = result.user;
+            setUser(user);
+            console.log(user);
+            navigate(redirectUri)
+         })
+         .catch(error =>{
+           alert(error.message)
+         })
+    }
     return (
         <div>
             <div className="container">
@@ -56,7 +74,7 @@ const Login = () => {
                             </form>
                             <div className="sideline">OR</div>
                             <div>
-                                <button onClick={handleGoogleSignIn} type="submit" className="btn btn-primary w-100 font-weight-bold mt-2"> <BsGoogle/> Login With Google</button>
+                                <button onClick={handleGoogleLogIn} type="submit" className="btn btn-primary w-100 font-weight-bold mt-2"> <BsGoogle/> Login With Google</button>
                             </div>
                             <div className="pt-4 text-center">
                                 <span>New user in this website? </span> 
