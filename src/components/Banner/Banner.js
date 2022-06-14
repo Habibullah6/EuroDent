@@ -5,10 +5,13 @@ import { NavLink } from 'react-router-dom';
 import bannerTwo from '../../images/dental-equipment.png';
 import bannerOne from '../../images/doc_team.jpg';
 import './Banner.css';
+
+
 const Banner = () => {
   return (
-    <div>
-      <Carousel controls={false} className='bg-secondary'>
+    <div className='bg-secondary'>
+      
+      <Carousel controls={false}>
         <Carousel.Item interval={1000}>
           <div className="row p-3">
             <div className="col">
@@ -43,7 +46,7 @@ const Banner = () => {
                     <h1 className='fs-1 text-justify'>High quality of medical services with advanced medical technologies</h1>
                     <p className='text-justify'>all specialists have extensive practical experience and regularly training courses in educational centers of the world.</p>
                     <NavLink to='*'>
-                    <button className='btn btn-secondary border border-2 border-white'>Book Appointment Now with 10% cashback <FiArrowRightCircle/> </button>
+                    <button className='btn btn-secondary border border-2 border-white'>Book Appointment <FiArrowRightCircle/> </button>
                     </NavLink>
                   </div>
                 </div>
@@ -65,13 +68,13 @@ const Banner = () => {
         <div className="row">
           <div className="col">
             <div className="row d-flex justify-content-between align-items-center">
-              <div className="col-lg-6  fs-4 fw-bold text-white text-start">
+              <div className="col-lg-6 col-md-6 col-12  fs-4 fw-bold text-white ">
                  <p> <span className='fs-1'><GrUserExpert/></span> All specialists have extensive practical experience and regularly training courses in educational centers of the world.</p>
               </div>
-              <div className="col-lg-6  text-end">
-                <h1 className='text-white'> <FiPhoneForwarded/> +88017150009002</h1>
+              <div className="col-lg-6 col-md-6 col-12  text-end">
+                <h1 className='text-white'> <FiPhoneForwarded/> +8801715000902</h1>
                 <NavLink to='*'>
-                <button className='btn btn-secondary border border-2 border-white'>Booking Appointment and get 10% cashback <FiArrowRightCircle/> </button>
+                {/* <button className=''>Booking now<FiArrowRightCircle/> </button> */}
                 </NavLink>
               </div>
             </div>
@@ -79,9 +82,10 @@ const Banner = () => {
         </div>
       </div>
     </div>
+    
 
 
-  );
+);
 };
 
 export default Banner;

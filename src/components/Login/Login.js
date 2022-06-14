@@ -1,9 +1,36 @@
+import { useState } from "react";
 import { BsGoogle } from "react-icons/bs";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../context/useAuth";
 import loginBanner from '../../images/bg3.jpg';
 import './Login.css';
 const Login = () => {
+    const {handleGoogleSignIn, handleEmailPasswordLogin, setUser} = useAuth();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const handleEmail = (e) => {
+       setEmail(e.target.value)
+    }
+    const handlePassword = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleEmailPasswordSignIn = (e) => {
+        e.preventDefault();
+        handleEmailPasswordLogin(email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            setUser(user)
+            // ...
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            alert(errorMessage)
+          });
+    }
+
     return (
         <div>
             <div className="container">
@@ -14,13 +41,13 @@ const Login = () => {
                     <div className="col-md-6 bg-white p-3">
                         <h3 className="pb-3">Login Form</h3>
                         <div className="form-style">
-                            <form>
+                            <form onSubmit={handleEmailPasswordSignIn}>
                              
                                 <div className="form-group pb-3">
-                                    <input type="email" placeholder="Email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                    <input onBlur={handleEmail} type="email" placeholder="Email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                 </div>
                                 <div className="form-group pb-3">
-                                    <input type="password" placeholder="Password" className="form-control" id="exampleInputPassword1" />
+                                    <input onBlur={handlePassword} type="password" placeholder="Password" className="form-control" id="exampleInputPassword1" />
                                 </div>
                                 
                                 <div className="pb-2">
@@ -29,10 +56,10 @@ const Login = () => {
                             </form>
                             <div className="sideline">OR</div>
                             <div>
-                                <button type="submit" className="btn btn-primary w-100 font-weight-bold mt-2"> <BsGoogle/> Login With Google</button>
+                                <button onClick={handleGoogleSignIn} type="submit" className="btn btn-primary w-100 font-weight-bold mt-2"> <BsGoogle/> Login With Google</button>
                             </div>
                             <div className="pt-4 text-center">
-                                <span>New users in this website? </span> 
+                                <span>New user in this website? </span> 
                                 <NavLink to='/register'> 
                                       Please Register
                                 </NavLink>

@@ -1,27 +1,32 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../context/useAuth';
 import './Header.css';
 
+
 const Header = () => {
+    const { user, handleSignOut } = useAuth();
     return (
-        
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto">
-        <Navbar.Brand className='fs-2 fw-bold text-primary' as={NavLink} to='/' >EuroDent</Navbar.Brand>
-        </Nav>
-        <Nav className='nav-container'>
-        <NavLink to='/home'>Home</NavLink>
-        <NavLink to='/about'>About</NavLink>
-        <NavLink to='/services'>Services</NavLink>
-        <NavLink to='/login'>Login/Register</NavLink>
-        </Nav>
-      </Navbar.Collapse>
-      </Container>
-    </Navbar>
-        
+
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand as={NavLink} to='/' className='fs-3 fw-bold'>EuroDent</Navbar.Brand>
+                <Navbar.Toggle />
+                <Navbar.Collapse className="justify-content-end nav-container">
+
+                    <Nav.Link as={NavLink} to='/home'>Home</Nav.Link>
+                    <Nav.Link as={NavLink} to='/about'>About</Nav.Link>
+                    <Nav.Link as={NavLink} to='/services'>Services</Nav.Link>
+
+                    {
+                        user.displayName ? <Nav.Link onClick={handleSignOut} className='border border-2 border-primary'>Logout</Nav.Link> : <Nav.Link as={NavLink} to='/login' className='border border-2 border-primary'>Login</Nav.Link>
+                    }
+
+                    <span className='text-primary fw-bold ms-3'>{user.displayName}</span>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+
     );
 };
 

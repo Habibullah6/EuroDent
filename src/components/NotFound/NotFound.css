@@ -14,20 +14,20 @@
 
 @media (min-width: 600px) {
     .not-found-container {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
 @media (min-width: 900px) {
     .not-found-container {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
     }
 }
 
 .notfound {
     width: 70ch;
-    height: 25ch;
+    height: 33ch;
     background-color: #000084;
 }
 
