@@ -9,7 +9,10 @@ const Login = () => {
     const {handleGoogleSignIn, handleEmailPasswordLogin, setUser} = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirectUri = location.state?.from || '/home';
 
     const handleEmail = (e) => {
        setEmail(e.target.value)
@@ -24,7 +27,8 @@ const Login = () => {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            setUser(user)
+            setUser(user);
+            navigate(redirectUri)
             // ...
           })
           .catch((error) => {
@@ -33,9 +37,6 @@ const Login = () => {
           });
     }
     
-    const navigate = useNavigate();
-    const location = useLocation();
-    const redirectUri = location.state?.from || '/home';
     const handleGoogleLogIn = () => {
         
         handleGoogleSignIn()
