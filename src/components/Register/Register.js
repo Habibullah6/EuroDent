@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../context/useAuth';
+import { TabTitle } from '../../hooks/GeneralFunction';
 import registerImg from '../../images/bg1.jpg';
 
 
 
 const Register = () => {
+    TabTitle('register page')
     const {handleEmailPasswordRegister,auth, updateProfile,handleEmailVerify, setUser} = useAuth();
     const [name, setName] = useState('')
     const [email, setEmail] = useState('');

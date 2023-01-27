@@ -1,14 +1,17 @@
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { TiSocialLinkedinCircular, TiSocialYoutubeCircular } from "react-icons/ti";
+import "./Footer.css";
+
+
 const Footer = () => {
     return (
-        <div className='bg-dark text-primary p-5'>
+        <div className='footer-container  p-5'>
             <div className="row">
                 <div className="col">
                     <div className="row d-flex justify-content-evenly align-items-center">
                         <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="d-flex  border border-3 border-primary pb-1 px-1 rounded-pill justify-content-center align-items-center text-white">
+                            <div className="d-flex  border border-3 border-dark pb-1 px-1 rounded-pill justify-content-center align-items-center text-white">
                                 <span className="me-4 fs-2"> <BsFacebook/>  </span>
                                 <span className="me-4 fs-2"> <AiFillTwitterCircle/></span>
                                 <span className="me-4 fs-1"><TiSocialLinkedinCircular /></span>

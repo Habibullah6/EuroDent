@@ -3,16 +3,20 @@ import { BsGoogle } from "react-icons/bs";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../context/useAuth";
+import { TabTitle } from "../../hooks/GeneralFunction";
 import loginBanner from '../../images/bg3.jpg';
 import './Login.css';
 const Login = () => {
-    const {handleGoogleSignIn, handleEmailPasswordLogin, setUser} = useAuth();
+    TabTitle('login page')
+    const {handleGoogleSignIn, handleEmailPasswordLogin, setUser, loading, setLoading} = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
     const navigate = useNavigate();
     const location = useLocation();
     const redirectUri = location.state?.from || '/home';
+
+    
 
     const handleEmail = (e) => {
        setEmail(e.target.value)

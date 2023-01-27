@@ -1,9 +1,12 @@
 
 import { NavLink, useParams } from "react-router-dom";
+import { TabTitle } from "../../hooks/GeneralFunction";
 import useFakeData from "../../hooks/useFakeData";
 
 
 const ServiceDetails = () => {
+  TabTitle('service details page')
+
   const { details } = useParams();
   const [services] = useFakeData();
   const selectedService = services.find((service) => service.name === details);

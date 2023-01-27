@@ -2,8 +2,7 @@ import { MdDoubleArrow } from "react-icons/md";
 import { TbDental } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 const ServiceCard = (props) => {
-
-
+    
     
     const { service } = props;
     
@@ -16,7 +15,7 @@ const ServiceCard = (props) => {
 
     return (
         <div className='col-lg-4 col-md-6 col-sm-12'>
-            <div className="card shadow-lg border-5" >
+            <div className="card shadow-lg" >
                 <img className="card-img-top w-100 img-fluid" src={service.img} alt=""/>
                     <div className="card-body border text-start text-primary">
                         <h4> <TbDental/> {service.name}</h4>

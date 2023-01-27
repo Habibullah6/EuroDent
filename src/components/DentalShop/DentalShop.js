@@ -11,13 +11,13 @@ const DentalShop = () => {
 
 
     return (
-        <div className=" text-white mt-5 p-5 bg-primary">
+        <div className=" text-white mt-5 p-3 bg-primary">
             <h1 className="mb-5">Dental Shop</h1>
             <div className="row">
                 <div className="col">
                     <div className="row g-5 d-flex justify-content-between align-items-center">
                         <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="card shop-card" >
+                            <div className="card" >
                                 <img src={productImg.one} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">
                                     <h5 className="card-title">Mornwell D50 Electric Flosser</h5>
@@ -27,7 +27,7 @@ const DentalShop = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="card shop-card" >
+                            <div className="card" >
                                 <img src={productImg.two} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">
                                     <h5 className="card-title">CT Dry Fluoride Toothpaste</h5>
@@ -37,7 +37,7 @@ const DentalShop = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="card shop-card" >
+                            <div className="card" >
                                 <img src={productImg.three} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">
                                     <h5 className="card-title">Biotene Oral</h5>
@@ -47,7 +47,7 @@ const DentalShop = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="card shop-card" >
+                            <div className="card" >
                                 <img src={productImg.four} className="card-img-top" alt="..." />
                                 <div className="card-body text-dark">
                                     <h5 className="card-title">Oral B-pro 7000</h5>

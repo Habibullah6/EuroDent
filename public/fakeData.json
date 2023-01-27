@@ -2,39 +2,39 @@
 [
     {
       "name": "General dentistry",
-      "img": "https://i.ibb.co/n75SW0d/dent-img1.jpg",
+      "img": "https://i.ibb.co/sPzm4pV/dent-img6.jpg",
       "description": "Diagnosis and treatment of oral diseases and their complications, elimination."
     },
     
     {
         "name": "Esthetic dentistry",
-        "img": "https://i.ibb.co/2S0RYgS/dent-img2.jpg",
+        "img": "https://i.ibb.co/ZVDVFBg/dent-img5.jpg",
         "description": "Aesthetic dentistry procedures can help you to get a perfect smile: whitening, building teeth."
     },
 
     {
         "name": "Orthodontics",
-        "img": "https://i.ibb.co/1qmBgw2/dent-img3.jpg",
+        "img": "https://i.ibb.co/SVhmGt7/dent-img4.jpg",
         "description": "The main object of treatment is a wrong bite. It can be corrected with the help of bracket systems."
     },
 
     {
         "name": "Implant dentistry",
-        "img": "https://i.ibb.co/SVhmGt7/dent-img4.jpg",
+        "img": "https://i.ibb.co/LtXKCL7/image.jpg",
         "description": "The procedure for implant implantation in bone tissue, which is later put abutment and crown."
     },
 
     {
         "name": "Surgery",
-        "img": "https://i.ibb.co/ZVDVFBg/dent-img5.jpg",
+        "img": "https://i.ibb.co/3swGXVj/Frederick-Maryland-Dentist-V2-1.png",
         "description": "Removal of the tooth, as well as emergency care for serious inflammatory diseases of the oral."
     },
 
 
     {
         "name": "Periodontics",
-        "img": "https://i.ibb.co/sPzm4pV/dent-img6.jpg",
-        "description": "It implies the prevention and treatment of various periodontal diseases – tissues that surround."
+        "img": "https://i.ibb.co/zrnzNxQ/dental.jpg",
+        "description": "It implies the prevention and treatment of various"
     }
 
 

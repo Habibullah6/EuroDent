@@ -8,7 +8,7 @@ const Header = () => {
     const { user, handleSignOut } = useAuth();
     return (
 
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" >
             <Container>
                 <Navbar.Brand as={NavLink} to='/' className='fs-3 fw-bold'>EuroDent</Navbar.Brand>
                 <Navbar.Toggle />
