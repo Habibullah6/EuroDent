@@ -86,7 +86,7 @@ const Banner = () => {
       <div className=" p-5 bg-primary">
         <div className="row">
           <div className="col">
-            <div className="row d-flex justify-content-between align-items-center">
+            <div className="row d-flex justify-content-center align-items-center">
               <div className="col-lg-6 col-md-6 col-12  fs-4 fw-bold text-white ">
                 <p>
                   {" "}
@@ -98,10 +98,10 @@ const Banner = () => {
                   world.
                 </p>
               </div>
-              <div className="col-lg-6 col-md-6 col-12  text-end">
-                <h1 className="text-white">
+              <div className="col-lg-6 col-md-6 col-12">
+                <h1 className="text-white text-end">
                   {" "}
-                  <FiPhoneForwarded /> +8801715000902
+                  <FiPhoneForwarded /> +88-01700112233
                 </h1>
                 <NavLink to="*">
                   {/* <button className=''>Booking now<FiArrowRightCircle/> </button> */}

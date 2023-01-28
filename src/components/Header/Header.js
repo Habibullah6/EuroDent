@@ -19,7 +19,7 @@ const Header = () => {
                     <Nav.Link as={NavLink} to='/services'>Services</Nav.Link>
 
                     {
-                        user.displayName ? <Nav.Link onClick={handleSignOut} className='border border-2 border-primary'>Logout</Nav.Link> : <Nav.Link as={NavLink} to='/login' className='border border-2 border-primary'>Login</Nav.Link>
+                        user.displayName ? <Nav.Link onClick={handleSignOut} className='border border-2 border-dark rounded'>Logout</Nav.Link> : <Nav.Link as={NavLink} to='/login' className='border border-2 border-dark rounded'>Login</Nav.Link>
                     }
 
                     <span className='text-primary fw-bold ms-3'>{user.displayName}</span>
