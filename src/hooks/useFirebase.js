@@ -5,13 +5,13 @@ initializeAuthentication()
 
 const useFirebase = () => {
 const [user, setUser] = useState({})
-const [loading, setLoading] = useState(true);
+
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider();
 
 const handleGoogleSignIn = () => {
-   setLoading(true)
+   
    return signInWithPopup(auth, googleProvider)
  
 }
@@ -19,12 +19,12 @@ const handleGoogleSignIn = () => {
 
 
 useEffect(()=>{
-setLoading(true)
+
   onAuthStateChanged(auth, (user)=>{
     if(user){
       
       setUser(user)
-      setLoading(false)
+      
     }
     
   })
@@ -78,7 +78,7 @@ return {
     auth,
     updateProfile,
     setUser,
-    loading,
+    
     
 }
 }

@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="col">
                     <div className="row d-flex justify-content-evenly align-items-center">
                         <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="d-flex  border border-3 border-dark pb-1 px-1 rounded-pill justify-content-center align-items-center text-white">
+                            <div className="d-flex  border border-3 border-dark pb-1 px-1 rounded-pill justify-content-center align-items-center">
                                 <span className="me-4 fs-2"> <BsFacebook/>  </span>
                                 <span className="me-4 fs-2"> <AiFillTwitterCircle/></span>
                                 <span className="me-4 fs-1"><TiSocialLinkedinCircular /></span>

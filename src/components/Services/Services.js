@@ -11,7 +11,7 @@ const Services = () => {
                 <div className="col">
                     <div className="row g-4 d-flex justify-content-between align-items-center">
                         {
-                            services.map(sv => <ServiceCard key={sv.name} service={sv}></ServiceCard>)
+                            services.map((sv, i) => <ServiceCard key={i} service={sv}></ServiceCard>)
                         }
                     </div>
                 </div>

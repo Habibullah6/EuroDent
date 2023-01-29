@@ -3,10 +3,8 @@ import useAuth from "../../context/useAuth";
 
 const PrivateRoute = ({children}) => {
     const location = useLocation()
-    const {user, loading} = useAuth();
-    if(loading){
-        return <p>Loading..............</p>
-    }
+    const {user} = useAuth();
+    
     return user?.displayName ? children : <Navigate to='/login' replace state={{from: location}} />
 
 

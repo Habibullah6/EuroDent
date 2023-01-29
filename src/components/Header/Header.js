@@ -10,7 +10,7 @@ const Header = () => {
 
         <Navbar collapseOnSelect expand="lg" >
             <Container>
-                <Navbar.Brand as={NavLink} to='/' className='fs-3 fw-bold'>EuroDent</Navbar.Brand>
+                <Navbar.Brand as={NavLink} to='/' className='fs-3 fw-bold text-primary'>EuroDent</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end nav-container">
 
